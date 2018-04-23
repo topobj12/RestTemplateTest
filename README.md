@@ -1,5 +1,5 @@
-# RestTemplateTest
-* RestTemplateで自作Factoryを使うテストプロジェクト  
+# RestTemplateでGETメソッドのときにリクエストボディを設定する方法
+* RestTemplateで自作Factoryを使う  
   
 springのデフォルトでは、javaが標準で持つURLConnectionを使用してコネクションを作成するが、  
 URLConnectionでは、GETメソッドの場合に、ボディを設定しようとするとPOSTメソッドに変換して通信を行う。  
