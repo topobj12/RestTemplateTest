@@ -1,6 +1,7 @@
 package app.controller;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.Assert.assertTrue;
 
 import java.net.URI;
 
@@ -60,6 +61,7 @@ public class TestControllerTest {
 
         } catch (Exception e) {
             e.printStackTrace();
+            assertTrue(false);
         }
     }
     
@@ -67,7 +69,7 @@ public class TestControllerTest {
     static class TestConfig {
         @Bean
         public RestTemplate restTemplate() {
-            return new RestTemplateBuilder().detectRequestFactory(false).requestFactory(OriginalClientHttpRequestFactory.class).build();
+            return new RestTemplateBuilder().requestFactory(OriginalClientHttpRequestFactory.class).build();
         }
     }
 
